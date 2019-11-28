@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="starter-template.css" rel="stylesheet">
+    <link href="stlye.css" rel="stylesheet">
+    <title>Monty Hall - Project</title>
+</head>
+
+<body>
+
+    <p class="h1">Monty Hall - Problem</p>
+
+    <table class="table table-bordered table-hover">
+
+        <thead>
+            <tr>
+                <th></th>
+                <th class="table-info" scope="col">Contestant changed their choice</th>
+                <th class="table-info" scope="col">Contestant DID NOT change their choice</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td class="table-info" scope="row">Total simulation count:</td>
+                <td><span id=totalCountChanged></span></td>
+                <td><span id=totalCountDidNotChange></span></td>
+            </tr>
+
+            <tr>
+                <td class="table-info" scope="row">Games won:</td>
+                <td><span id=changedAndWon></span> ( <span id=changedAndWonPercentage></span>%)</td>
+                <td><span id=didNotChangeAndWon></span> ( <span id=didNotChangeAndWonPercentage></span>%)</td>
+            </tr>
+
+            <tr>
+                <td class="table-info" scope="row">Total duration to run simulation:</td>
+                <td><span id=simulationWithChangesDuration></span>ms</td>
+                <td><span id=simulationWithoutChangesDuration></span>ms</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <p><button type="button" class="btn btn-outline-primary" onclick=start();>Run Simulation</button></p>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>
