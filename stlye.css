@@ -7,7 +7,31 @@ body {
     padding-bottom: 50px;
 }
 
+h2 {
+    margin-top: 0.4rem;
+}
+
 .starter-template {
     padding: 3rem 1.5rem;
     text-align: center;
+}
+
+.img-center {
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+}
+
+.embed-responsive {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+
+.other-words {
+    margin-top: 2em;
+    margin-left: 4em;
+    margin-right: 1em;
+    font-size: large;
+    padding: 1em;
 }

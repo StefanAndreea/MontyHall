@@ -7,12 +7,76 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="starter-template.css" rel="stylesheet">
     <link href="stlye.css" rel="stylesheet">
-    <title>Monty Hall - Project</title>
+    <title>Monty Hall Paradox</title>
 </head>
 
 <body>
 
-    <p class="h1">Monty Hall - Problem</p>
+    <p class="h1">Monty Hall Paradox</p>
+
+    <h2>What is it?</h2>
+
+    <p><strong>The Monty Hall</strong> is a paradox put in the form of a puzzle and it's based on the American
+        television game show "Let's Make a Deal" and named after its original host, Monty Hall. Suppose you're on a game
+        show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a
+        door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a
+        goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?</p>
+
+    <div class="row text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Monty_open_door.svg/1200px-Monty_open_door.svg.png"
+            alt="Responsive image" class="img-center" />
+    </div>
+
+    <h2>How does it work?</h2>
+
+    <p>
+        There are three doors. One of these doors contains a prize. The other two do not. Therefore, the probability
+        that any one of the doors contains the prize is 1/3. If the Monty Hall problem ended with the selection of the
+        first door, we could safely predict that one time out of three, the door picked will contain a prize; and that
+        the contestant will go home with a brand-new car.
+    </p>
+
+    <p>
+        These are the probabilities we face when we are confronted by these three doors: the probability of one door
+        being the door which hides a prize is 1/3, and the probability that it is not the prize-hiding door is 2/3.
+    </p>
+
+    <br>
+    <h2>The solution</h2>
+
+    <p>
+        The probabilities of your initial choice being correct, and the remaining choices have to sum to equal one.
+        Therefore, the probability of the remaining choices have to sum to equal one minus the probability of your
+        initial choice. In this case (with three doors), they have to sum to equal 2/3. Say a door isn't opened. Then,
+        you would have two to switch to (if you choose to switch — this would be like “changing your mind”), and your
+        chance of picking the correct door would be 1/2 × 2/3. Well, that's 1/3, just like your initial choice. But if
+        Monty has to open a door, then you'll only have one door to switch to.
+    </p>
+
+    <p> <strong> In this case (which is the Monty Hall problem), you'll pick the remaining door — so that'd be 1 × 2/3.
+            And that's a probability of 2/3. </strong>
+    </p>
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="video_Trim.mp4"></iframe>
+    </div>
+
+    <br>
+    <em>In other words....</em> <br>
+    <p class="other-words border border-info">
+        There is a 1/3 chance of the car being behind door number 1 and a 2/3 chance that the car isn’t behind door
+        number 1. After Monty Hall opens door number 2 to reveal a goat,
+        <br>
+        there’s still a 1/3 chance that the car is behind door number 1 and a 2/3 chance that the car isn’t behind door
+        number 1.
+        <br>
+        <strong>A 2/3 chance that the car isn’t behind door number 1 is a 2/3 chance that the car is behind door number
+            3.
+        </strong>
+    </p>
+
+    <br>
+    <p class="h2">The simulation for 3 doors</p>
 
     <table class="table table-bordered table-hover">
 
@@ -34,8 +98,8 @@
 
             <tr>
                 <td class="table-info" scope="row">Games won:</td>
-                <td><span id=changedAndWon></span> ( <span id=changedAndWonPercentage></span>%)</td>
-                <td><span id=didNotChangeAndWon></span> ( <span id=didNotChangeAndWonPercentage></span>%)</td>
+                <td><span id=changedAndWon></span> (<span id=changedAndWonPercentage></span>%)</td>
+                <td><span id=didNotChangeAndWon></span> (<span id=didNotChangeAndWonPercentage></span>%)</td>
             </tr>
 
             <tr>
@@ -47,9 +111,128 @@
         </tbody>
 
     </table>
+
+    <br>
+    <p class="h2">The simulation for 4 doors</p>
+
+    <table class="table table-bordered table-hover">
+
+        <thead>
+            <tr>
+                <th></th>
+                <th class="table-info" scope="col">Contestant changed their choice</th>
+                <th class="table-info" scope="col">Contestant DID NOT change their choice</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td class="table-info" scope="row">Total simulation count:</td>
+                <td><span id=totalCountChanged4></span></td>
+                <td><span id=totalCountDidNotChange4></span></td>
+            </tr>
+
+            <tr>
+                <td class="table-info" scope="row">Games won:</td>
+                <td><span id=changedAndWon4></span> (<span id=changedAndWonPercentage4></span>%)</td>
+                <td><span id=didNotChangeAndWon4></span> (<span id=didNotChangeAndWonPercentage4></span>%)</td>
+            </tr>
+
+            <tr>
+                <td class="table-info" scope="row">Total duration to run simulation:</td>
+                <td><span id=simulationWithChangesDuration4></span>ms</td>
+                <td><span id=simulationWithoutChangesDuration4></span>ms</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br>
+    <p class="h2">The simulation for 5 doors</p>
+
+    <table class="table table-bordered table-hover">
+
+        <thead>
+            <tr>
+                <th></th>
+                <th class="table-info" scope="col">Contestant changed their choice</th>
+                <th class="table-info" scope="col">Contestant DID NOT change their choice</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td class="table-info" scope="row">Total simulation count:</td>
+                <td><span id=totalCountChanged5></span></td>
+                <td><span id=totalCountDidNotChange5></span></td>
+            </tr>
+
+            <tr>
+                <td class="table-info" scope="row">Games won:</td>
+                <td><span id=changedAndWon5></span> (<span id=changedAndWonPercentage5></span>%)</td>
+                <td><span id=didNotChangeAndWon5></span> (<span id=didNotChangeAndWonPercentage5></span>%)</td>
+            </tr>
+
+            <tr>
+                <td class="table-info" scope="row">Total duration to run simulation:</td>
+                <td><span id=simulationWithChangesDuration5></span>ms</td>
+                <td><span id=simulationWithoutChangesDuration5></span>ms</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
     <p><button type="button" class="btn btn-outline-primary" onclick=start();>Run Simulation</button></p>
 
-    <script src="script2.js"></script>
+    <br>
+
+    <p>
+        The simulation above shows us that out of 100.000 tests in which the contestants had to choose if they want to
+        change the door (or not), the percentage of those who won is statistically significant than the ones who didn't.
+        We could say that the ratio is roughly: 66% - won, 33% - lost. Each set of 100.000 tests were taken separately,
+        that's why the total percentage is not 100%. Also, we can see that the duration for the simulation where the
+        contestants changed their choice is slighly longer than the in those simulation where the contestants did not
+        change their mind.
+
+        <br>
+        <br>
+        Thus, we can generalize for N-door version. N-door generalization of the original problem in which the host
+        opens p losing doors and then offers the player the opportunity to switch; in this variant switching wins with
+        probability <img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/02610edd1a957c0c80e719d5d61eae662d71e292" />
+        This probability is always greater than <img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8fb12c5f73f8763997550a9abdf59b00c4932ee4" />,
+        therefore switching always brings an advantage.
+
+        Even if the host opens only a single door <img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c29a2f2fb3f642618036ed7a79712202e7ada924" />,
+        the player is better off switching
+        in every case. As N grows larger, the advantage decreases and approaches zero.
+
+        At the other extreme, if the host opens all losing doors but one (p = N − 2) the advantage increases as N grows
+        large (the probability of winning by switching is N − 1/N, which approaches 1 as N grows very large).
+        <br>
+        <br>
+        <strong>
+            The difference in probability for switching is shown to diminish as the number of doors increases. It's
+            important to say that we are just adding more doors, but Monty is still opening only one door, and that's
+            why the difference is getting smaller.</strong>
+        So, as N gets large the difference between the two gets smaller and smaller. The case with 3 door, is the case
+        where you gain the most by switching.
+        <br>
+        <br>
+        <strong>It's important to say that we are just adding more doors, but Monty is still opening only one door, and
+            that's why the difference is getting smaller.</strong>
+
+    </p>
+
+    <br>
+
+    <script src="script.js"></script>
 
 </body>
 
